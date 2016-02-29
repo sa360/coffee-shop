@@ -51,10 +51,11 @@ router.delete('/:shopId',function(req,res){
 	models.coffeeshop.find(where).then(function(shop){
 		shop.destroy();
 		res.json({
-			deleted:true,
-			shops:shop
+			deleted:true
 		});
+		res.json(shops);
 	});
+	
 });
 
 module.exports = router;
