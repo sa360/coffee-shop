@@ -1,0 +1,27 @@
+<h3>
+	Add Coffee Shop
+</h3>
+
+<article class="shop-frm">
+	<form name="add-shop" ng-submit="ctrl.addShop()">
+
+		<div>
+			<label>Name</label>
+			<input type="text" name="name" ng-model="ctrl.name" required>
+		</div>
+		<div>
+			<label>Address</label>
+			<input type="text" name="address" ng-model="ctrl.address" required>
+		</div>
+		<div>
+			<label>Rating</label>
+			<select  name="rating" ng-options="rating as rating for rating in ctrl.ratings" ng-model="ctrl.rating">
+			</select>
+		</div>
+		<div>
+
+		<div>
+			<button type="submit">Add Coffee Shop</button>
+		</div>
+	</form>
+</article>

@@ -1,0 +1,13 @@
+<div class="listings">
+	<button type="button" ui-sref="newCoffeeShop">Add New Shop</button>
+</div>
+<h1>Coffee Shops in Toronto</h1>
+<div ng-repeat="shop in ctrl.shops">
+	<div class="listings">
+		<p>Name: {{shop.name}}</p>
+		<p>Address: {{shop.address}}</p>
+		<p>Rating: {{shop.rating}}</p>
+		<button type="button" ng-click="ctrl.editShop(shop)">Edit Shop</button>
+		<button type="submit" ng-click="ctrl.deleteShop(shop.id)">{{ctrl.shop_delete_btn}}</button>
+	</div>
+</div>
