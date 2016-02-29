@@ -50,8 +50,10 @@ router.delete('/:shopId',function(req,res){
 	var where = {where:{id:req.params.shopId}}
 	models.coffeeshop.find(where).then(function(shop){
 		shop.destroy();
-		deleted:true,
-		shops:shop
+		res.json({
+			deleted:true,
+			shops:shop
+		});
 	});
 });
 
